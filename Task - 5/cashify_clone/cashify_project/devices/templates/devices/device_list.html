@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container mt-4">
+
+<h2 class="text-center mb-4">Available Devices</h2>
+
+<form method="get" class="row mb-4">
+
+  <div class="col-md-5">
+    <input type="text" name="q" class="form-control"
+           placeholder="Search devices..." value="{{ request.GET.q }}">
+  </div>
+
+  <div class="col-md-4">
+    <input type="text" name="brand" class="form-control"
+           placeholder="Filter by brand" value="{{ request.GET.brand }}">
+  </div>
+
+  <div class="col-md-3">
+    <button class="btn btn-primary w-100">Search</button>
+  </div>
+
+</form>
+
+<div class="row">
+
+{% for device in page_obj %}
+
+<div class="col-md-4 mb-4">
+
+  <div class="card shadow position-relative">
+
+```
+{% if device.is_sold %}
+  <div class="sold-overlay">SOLD</div>
+{% endif %}
+
+{% if device.image %}
+  <img src="{{ device.image.url }}"
+       class="card-img-top {% if device.is_sold %}blurred{% endif %}"
+       style="height:200px;object-fit:cover;">
+{% else %}
+  <div class="bg-light d-flex align-items-center justify-content-center"
+       style="height:200px;">
+    No Image
+  </div>
+{% endif %}
+
+<div class="card-body">
+
+  <h5>{{ device.name }}</h5>
+  <p>{{ device.brand }}</p>
+  <h4 class="text-success">₹{{ device.price }}</h4>
+
+  <a href="{% url 'device_detail' device.id %}"
+     class="btn btn-primary w-100 mb-2">
+     View Device
+  </a>
+
+  {% if user.is_authenticated %}
+
+    {% if device.user == user %}
+      {% if not device.is_sold %}
+        <a href="{% url 'sell_device' device.id %}"
+           class="btn btn-danger w-100 mb-2">
+           Sell
+        </a>
+      {% endif %}
+    {% else %}
+      {% if not device.is_sold %}
+        <a href="{% url 'buy_device' device.id %}"
+           class="btn btn-success w-100 mb-2">
+           Buy
+        </a>
+      {% endif %}
+    {% endif %}
+
+    <a href="{% url 'device_chat' device.id %}"
+       class="btn btn-secondary w-100">
+       Chat
+    </a>
+
+  {% endif %}
+
+</div>
+```
+
+  </div>
+
+</div>
+{% empty %}
+  <p class="text-center">No devices found.</p>
+{% endfor %}
+
+</div>
+
+<div class="d-flex justify-content-center mt-4">
+
+{% if page_obj.has_previous %} <a href="?page={{ page_obj.previous_page_number }}"
+    class="btn btn-outline-primary me-2">Previous</a>
+{% endif %}
+
+  <span class="align-self-center">
+    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+  </span>
+
+{% if page_obj.has_next %} <a href="?page={{ page_obj.next_page_number }}"
+    class="btn btn-outline-primary ms-2">Next</a>
+{% endif %}
+
+</div>
+
+</div>
+
+{% endblock %}

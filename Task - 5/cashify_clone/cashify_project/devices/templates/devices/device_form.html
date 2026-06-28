@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container mt-4">
+
+<h2 class="mb-4 text-center">Add / Update Device</h2>
+
+<form method="post" enctype="multipart/form-data"
+      class="card shadow p-4">
+
+{% csrf_token %}
+
+<div class="mb-3">
+<label>Name</label>
+{{ form.name }}
+</div>
+
+<div class="mb-3">
+<label>Brand</label>
+{{ form.brand }}
+</div>
+
+<div class="mb-3">
+<label>Condition</label>
+{{ form.condition }}
+</div>
+
+<div class="mb-3">
+<label>Price</label>
+{{ form.price }}
+</div>
+
+<div class="mb-3">
+<label>Description</label>
+{{ form.description }}
+</div>
+
+<!-- Image Upload with Placeholder -->
+<div class="mb-3 text-center">
+
+<label class="form-label">Device Image</label>
+
+<div class="border p-3 rounded">
+
+<img id="preview"
+     src="https://via.placeholder.com/200x200?text=Upload+Image"
+     width="200"
+     class="mb-2 rounded shadow">
+
+{{ form.image }}
+
+</div>
+</div>
+
+<button class="btn btn-success w-100">
+Save Device
+</button>
+
+</form>
+
+</div>
+
+<script>
+document.querySelector('input[type="file"]').onchange = function(evt) {
+  const [file] = evt.target.files;
+  if (file) {
+    document.getElementById("preview").src =
+      URL.createObjectURL(file);
+  }
+};
+</script>
+
+{% endblock %}

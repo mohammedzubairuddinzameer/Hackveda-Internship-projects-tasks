@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container mt-4">
+
+<h3>{{ device.name }} Chat</h3>
+
+<div class="border p-3 mb-3" style="height:300px;overflow-y:scroll;">
+{% for msg in messages %}
+<p>
+<strong>{{ msg.sender.username }}:</strong>
+{{ msg.message }}
+</p>
+{% endfor %}
+</div>
+
+<form method="post">
+{% csrf_token %}
+<input type="text" name="message"
+       class="form-control mb-2"
+       placeholder="Ask if it's available...">
+
+<button class="btn btn-primary">Send</button>
+</form>
+
+</div>
+
+{% endblock %}
