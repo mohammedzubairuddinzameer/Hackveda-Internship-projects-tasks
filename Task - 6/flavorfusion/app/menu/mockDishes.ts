@@ -1,0 +1,73 @@
+export const mockDishes = [
+  // ================= ROTI (10) =================
+  { id: 2001, title: "Rumali Roti", price: 40, image: "/dishes/RR.jpg", category: "Roti" },
+  { id: 2002, title: "Tandoori Roti", price: 35, image: "/dishes/TR.jpg", category: "Roti" },
+  { id: 2003, title: "Butter Naan", price: 45, image: "/dishes/BN.jpg", category: "Roti" },
+  { id: 2004, title: "Garlic Naan", price: 55, image: "/dishes/GN.jpg", category: "Roti" },
+  { id: 2005, title: "Khamiri Roti", price: 50, image: "/dishes/KR.jpg", category: "Roti" },
+  { id: 2006, title: "Sheermal", price: 60, image: "/dishes/SH.jpg", category: "Roti" },
+  { id: 2007, title: "Taftaan", price: 65, image: "/dishes/TF.jpg", category: "Roti" },
+  { id: 2008, title: "Plain Naan", price: 40, image: "/dishes/NAAN.jpg", category: "Roti" },
+  { id: 2009, title: "Kulcha", price: 50, image: "/dishes/KC.jpg", category: "Roti" },
+  { id: 2010, title: "Roomali Butter Roti", price: 55, image: "/dishes/BRR.jpg", category: "Roti" },
+
+  // ================= CURRY (10) =================
+  { id: 7001, title: "Tandoori Chicken Curry", price: 320, image: "/dishes/TCK.jpg", category: "Curry" },
+  { id: 7002, title: "Mutton Methi", price: 380, image: "/dishes/MM.jpg", category: "Curry" },
+  { id: 7003, title: "Dahi Mirch Curry", price: 210, image: "/dishes/DMC.jpg", category: "Curry" },
+  { id: 7004, title: "Bagara Baingan", price: 220, image: "/dishes/BB.jpg", category: "Curry" },
+  { id: 7005, title: "Chicken Korma", price: 340, image: "/dishes/CK.jpg", category: "Curry" },
+  { id: 7006, title: "Mutton Dalcha", price: 360, image: "/dishes/MD.jpg", category: "Curry" },
+  { id: 7007, title: "Paneer Butter Masala", price: 280, image: "/dishes/PBM.jpg", category: "Curry" },
+  { id: 7008, title: "Chicken Masala", price: 300, image: "/dishes/CM.jpg", category: "Curry" },
+  { id: 7009, title: "Egg Curry", price: 190, image: "/dishes/EC.jpg", category: "Curry" },
+  { id: 7010, title: "Khatti Dal", price: 160, image: "/dishes/KD.jpg", category: "Curry" },
+
+  // ================= RICE (10) =================
+  { id: 3001, title: "Hyderabadi Chicken Biryani", price: 349, image: "/dishes/HCB.jpg", category: "Rice" },
+  { id: 3002, title: "Hyderabadi Mutton Biryani", price: 399, image: "/dishes/HMB.jpg", category: "Rice" },
+  { id: 3003, title: "Veg Dum Biryani", price: 299, image: "/dishes/VDB.jpg", category: "Rice" },
+  { id: 3004, title: "Bagara Rice", price: 220, image: "/dishes/BR.jpg", category: "Rice" },
+  { id: 3005, title: "Khichdi with Khatta", price: 199, image: "/dishes/KKK.jpg", category: "Rice" },
+  { id: 3006, title: "Jeera Rice", price: 180, image: "/dishes/JR.jpg", category: "Rice" },
+  { id: 3007, title: "Ghee Rice", price: 210, image: "/dishes/GR.jpg", category: "Rice" },
+  { id: 3008, title: "Curd Rice", price: 160, image: "/dishes/CR.jpg", category: "Rice" },
+  { id: 3009, title: "Veg Pulao", price: 190, image: "/dishes/VP.jpg", category: "Rice" },
+  { id: 3010, title: "Tomato Rice", price: 170, image: "/dishes/TOR.jpg", category: "Rice" },
+
+  // ================= SWEETS (10) =================
+  { id: 4001, title: "Double Ka Meetha", price: 150, image: "/dishes/DKM.jpg", category: "Sweets" },
+  { id: 4002, title: "Qubani Ka Meetha", price: 160, image: "/dishes/QKM.jpg", category: "Sweets" },
+  { id: 4003, title: "Sheer Khurma", price: 180, image: "/dishes/SK.jpg", category: "Sweets" },
+  { id: 4004, title: "Gulab Jamun", price: 120, image: "/dishes/GJ.jpg", category: "Sweets" },
+  { id: 4005, title: "Phirni", price: 140, image: "/dishes/PH.jpg", category: "Sweets" },
+  { id: 4006, title: "Badam Kheer", price: 170, image: "/dishes/BKK.jpg", category: "Sweets" },
+  { id: 4007, title: "Carrot Halwa", price: 150, image: "/dishes/CKH.jpg", category: "Sweets" },
+  { id: 4008, title: "Khoya Laddu", price: 130, image: "/dishes/KHL.jpg", category: "Sweets" },
+  { id: 4009, title: "Rasmalai", price: 160, image: "/dishes/RASM.jpg", category: "Sweets" },
+  { id: 4010, title: "Shahi Tukda", price: 170, image: "/dishes/SHTK.jpg", category: "Sweets" },
+
+  // ================= FAST FOOD (10) =================
+  { id: 5001, title: "Osmania Biscuit", price: 60, image: "/dishes/OSB.jpg", category: "Fast Food" },
+  { id: 5002, title: "Chicken Shawarma", price: 180, image: "/dishes/CHSH.jpg", category: "Fast Food" },
+  { id: 5003, title: "Veg Puff", price: 40, image: "/dishes/VPFF.jpg", category: "Fast Food" },
+  { id: 5004, title: "Chicken Puff", price: 60, image: "/dishes/CPff.jpg", category: "Fast Food" },
+  { id: 5005, title: "Irani Chai", price: 30, image: "/dishes/ICH.jpg", category: "Fast Food" },
+  { id: 5006, title: "Samosa", price: 25, image: "/dishes/SAMO.jpg", category: "Fast Food" },
+  { id: 5007, title: "Mirchi Bajji", price: 35, image: "/dishes/MBJ.jpg", category: "Fast Food" },
+  { id: 5008, title: "Cutlet", price: 45, image: "/dishes/CTLT.jpg", category: "Fast Food" },
+  { id: 5009, title: "French Fries", price: 90, image: "/dishes/FF.jpg", category: "Fast Food" },
+  { id: 5010, title: "Burger", price: 120, image: "/dishes/BRGR.jpg", category: "Fast Food" },
+
+  // ================= OTHERS (10) =================
+  { id: 6001, title: "Hyderabadi Haleem", price: 280, image: "/dishes/HHA.jpg", category: "Others" },
+  { id: 6002, title: "Chicken 65", price: 220, image: "/dishes/C65.jpg", category: "Others" },
+  { id: 6003, title: "Mutton Korma", price: 350, image: "/dishes/MUTKHO.jpg", category: "Others" },
+  { id: 6004, title: "Dalcha", price: 180, image: "/dishes/DALCHA.jpg", category: "Others" },
+  { id: 6005, title: "Sheek Kebab", price: 200, image: "/dishes/SHKB.jpg", category: "Others" },
+  { id: 6006, title: "Keema Samosa", price: 70, image: "/dishes/KEEMASAMO.jpg", category: "Others" },
+  { id: 6007, title: "Hyderabadi Khatti Dal", price: 150, image: "/dishes/HKD.jpg", category: "Others" },
+  { id: 6008, title: "Talawa Gosht", price: 320, image: "/dishes/TALGOSH.jpg", category: "Others" },
+  { id: 6009, title: "Khubani Chutney", price: 90, image: "/dishes/KCHUTNEY.jpg", category: "Others" },
+  { id: 6010, title: "Irani Chai with Osmania Biscuit", price: 80, image: "/dishes/ICOB.jpg", category: "Others" },
+];
